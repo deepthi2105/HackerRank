@@ -8,15 +8,8 @@ import sys
 
 # Complete the rotLeft function below.
 def rotLeft(a, d):
-    s=[]
-    n=len(a)-1
-    for i in range(d):
-        for j in range(1,n+1):
-            s.append(a[j])
-        s.append(a[0])
-        a=s[:]
-        s=[]
-    return a
+    no_rotations=d%len(a)
+    return (a[no_rotations:]+a[:no_rotations])
 
 
 if __name__ == '__main__':
